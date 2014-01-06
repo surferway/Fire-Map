@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" 
+    tools:context=".DispatchActivity">
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    
+    <TextView
+         android:id="@+id/textDispatch"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/dispatch_number"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+         
+    <TextView
+        android:id="@+id/textInstruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_instruct"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+    <EditText
+         android:id="@+id/editTextDispatch"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="number" />
+         
+    <TextView
+         android:id="@+id/textLocation"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/text_location"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+         
+    <TextView
+         android:id="@+id/textLowerLeftLat"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/lowerLeftLat"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+         
+    <EditText
+         android:id="@+id/editLowerLeftLat"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="number" />
+         
+    <TextView
+         android:id="@+id/textLowerLeftLong"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/lowerLeftLong"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     <EditText
+         android:id="@+id/editLowerLeftLong"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="number" />
+         
+    <TextView
+         android:id="@+id/textUpperRightLat"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/upperRightLat"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+         
+    <EditText
+         android:id="@+id/editUpperRightLat"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="number" />
+         
+    <TextView
+         android:id="@+id/textUpperRightLong"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/upperRightLong"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+         
+    <EditText
+         android:id="@+id/editUpperRightLong"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="number" />
+         
+    <Button
+         android:id="@+id/btnSaveDispatch"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/btn_save" />
+    
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FireMap</string>
+    <string name="title_activity_map">Fire Map</string>
+    <string name="action_settings">Dispatch</string>
+    <string name="number_text">Call Number</string>
+    <string name="empty_list">Please change Dispatch number</string>
+    <string name="title_activity_dispatch">Dispatch</string>
+    <string name="dispatch_number">Dispatch Number</string>
+    <string name="btn_save">Save Dispatch</string>
+    <string name="text_instruct">Type in first 4 numbers of Dispatch</string>
+    <string name="text_location">Call Area Location Boundary</string>
+    <string name="lowerLeftLat">Lower Left Latitude</string>
+    <string name="lowerLeftLong">Lower Left Longitude</string>
+    <string name="upperRightLat">Upper Right Latitude</string>
+    <string name="upperRightLong">Upper Right Longitude</string>    
+
+</resources>
