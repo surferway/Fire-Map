@@ -16,6 +16,7 @@ import android.widget.Toast;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBarActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -23,7 +24,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapActivity extends FragmentActivity {
+public class MapActivity extends ActionBarActivity {
 	 
     // Google Map
     private GoogleMap googleMap;
@@ -72,6 +73,7 @@ public class MapActivity extends FragmentActivity {
      * */
     private void initilizeMap() {
         if (googleMap == null) {
+        	//MapFragment not supported below Honeycomb
             //googleMap = ((MapFragment) getFragmentManager().findFragmentById(
             //        R.id.map)).getMap();
         	FragmentManager fmanager = getSupportFragmentManager();

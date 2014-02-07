@@ -45,12 +45,14 @@ public class MainActivity extends ListActivity {
 		Uri uri = Uri.parse("content://sms/inbox");
 		Cursor c= getContentResolver().query(uri, null, null ,null,null);
 
-		
 		// Read the sms data and store it in the list
 		if(c.moveToFirst()) {
 			for(int i=0; i < c.getCount(); i++) {
 				String smsNumber = c.getString(c.getColumnIndexOrThrow("address")).toString();
-				String smsBody = c.getString(c.getColumnIndexOrThrow("body")).toString();	
+				String smsBody = c.getString(c.getColumnIndexOrThrow("body")).toString();
+  
+				smsNumber = smsNumber.replaceAll("[^\\d.]", "");
+				if (smsNumber.length() >= dispatch.length()){
 				if ((smsNumber.substring(0,dispatch.length())).equals(dispatch)){
 					String[] parts = smsBody.split(":");	
 					SMSData sms = new SMSData();
@@ -76,6 +78,7 @@ public class MainActivity extends ListActivity {
 					    	sms.setAddress(parts[j]);
 					        break;  					   
 						}
+
 						
 					}
 					
@@ -88,7 +91,7 @@ public class MainActivity extends ListActivity {
 					if (smsBody.contains("Address:")){
 						smsList.add(sms);	
 					}
-									
+				}					
 				}
 				c.moveToNext();
 			}
@@ -97,7 +100,9 @@ public class MainActivity extends ListActivity {
 		
 		if (smsList.isEmpty()){
 			SMSData sms = new SMSData();
+			sms.setDispatch("");
 			sms.setDay("Please enter Dispatch number from which you receive your texts.");
+			sms.setDepartment("");
 			sms.setCallType("");
 			sms.setAddress("Click here to enter your Dispatch number.");
 			smsList.add(sms);        
